@@ -1,0 +1,44 @@
+/* 🎨 Part 1: CSS Animations */
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 50px;
+  background: #f5f5f5;
+}
+
+/* Button hover transition */
+.btn-hover {
+  padding: 10px 20px;
+  background: #6200ea;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.4s ease, transform 0.3s ease;
+}
+
+.btn-hover:hover {
+  background: #3700b3;
+  transform: scale(1.1);
+}
+
+/* Box that will be animated */
+.box {
+  width: 100px;
+  height: 100px;
+  margin: 20px auto;
+  background: coral;
+  border-radius: 10px;
+}
+
+/* Keyframe for box animation */
+@keyframes bounce {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-50px); }
+  100% { transform: translateY(0); }
+}
+
+/* Class added dynamically with JS */
+.animate {
+  animation: bounce 1s ease-in-out;
+}
